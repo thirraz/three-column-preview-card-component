@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  /* for paragraphs */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  /* for headings, background & buttons */
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 55rem;
+  width: 55rem;
+  height: auto;
+  display: flex;
+}
+
+.carType {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  transition: width 150ms ease-out;
+}
+
+.carType:nth-child(1) {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.carType:nth-child(3) {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.carType:hover {
+  width: 40%;
+}
+
+.text {
+  padding: 2.6rem;
+}
+
+.text img {
+  width: 70px;
+  margin-bottom: 1.6rem;
+}
+
+.text h1,
+.text h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--veryLightGray);
+}
+
+.text p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  margin-top: 1.6rem;
+  color: var(--transparentWhite);
+}
+
+.btn {
+  font-family: "Lexend Deca", sans-serif;
+  width: 8.8rem;
+  height: 3rem;
+  border-radius: 30px;
+  border: none;
+  margin: 1.7rem 2.5rem;
+}
+
+.sedan {
+  background: var(--brightOrange);
+}
+
+.suv {
+  background: var(--darkCyan);
+}
+
+.luxury {
+  background: var(--veryDarkCyan);
+}
+
+.sedan .btn {
+  color: var(--brightOrange);
+}
+
+.sedan .btn:hover {
+  border: 3px solid #fff;
+  color: #fff;
+  background: var(--brightOrange);
+}
+
+.suv .btn {
+  color: var(--darkCyan);
+}
+
+.suv .btn:hover {
+  border: 3px solid #fff;
+  color: #fff;
+  background: var(--darkCyan);
+}
+
+.luxury .btn {
+  color: var(--veryDarkCyan);
+}
+
+.luxury .btn:hover {
+  border: 3px solid #fff;
+  color: #fff;
+  background: var(--veryDarkCyan);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .carType {
+    width: 100%;
+    transition: none;
+  }
+
+  .carType:hover {
+    width: 100%;
+  }
+
+  .carType:nth-child(1) {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .carType:nth-child(3) {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .text {
+    padding: 3.2rem;
+  }
+
+  .btn {
+    margin-bottom: 2.8rem;
+  }
+}

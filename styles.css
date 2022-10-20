@@ -28,6 +28,7 @@ body {
   width: 55rem;
   height: auto;
   display: flex;
+  margin: 0 0.6rem;
 }
 
 .carType {
@@ -101,7 +102,7 @@ body {
 }
 
 .sedan .btn:hover {
-  border: 3px solid #fff;
+  border: 2.8px solid #fff;
   color: #fff;
   background: var(--brightOrange);
 }
@@ -111,7 +112,7 @@ body {
 }
 
 .suv .btn:hover {
-  border: 3px solid #fff;
+  border: 2.8px solid #fff;
   color: #fff;
   background: var(--darkCyan);
 }
@@ -121,7 +122,7 @@ body {
 }
 
 .luxury .btn:hover {
-  border: 3px solid #fff;
+  border: 2.8px solid #fff;
   color: #fff;
   background: var(--veryDarkCyan);
 }
@@ -130,6 +131,10 @@ body {
   .container {
     flex-direction: column;
     width: 90%;
+    margin: 0;
+    position: absolute;
+    top: 0.4rem;
+    bottom: 4rem;
   }
 
   .carType {
